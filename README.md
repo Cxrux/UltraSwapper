@@ -1,3 +1,4 @@
+# UltraSwapper
 @page "/lobbyswapper"
 @using Microsoft.AspNetCore.WebUtilities
 @inject MainService main
@@ -82,7 +83,7 @@ if (DisableButtons == true)
 else if (curSelect == SelectionMode.SkinSelect)
 {
     <p>Search: <input type="text" placeholder="Renegade Raider, CID_028_Athena_Commando_F" @bind-value="SearchTerm" @bind-value:event="oninput" style="width:30vw" /></p>
-    
+
         @if (curSlot == SelectedSlot.SwapsFrom)
         {
              @if (!SwapsToSkin.id.StartsWith("ITEM_ID"))
@@ -453,9 +454,9 @@ button.refresh:hover span:after {
                 placeHolderskin.id = "ITEM_ID                                                                                                                                                    ";
                 placeHolderskin.images = new Data.SkinObj.Images() { icon = "empty-icon.png", smallIcon = "empty-icon.png" };
                 placeHolderskin.rarity = new Data.SkinObj.Rarity() { value = "none", bgcss = "background: -o-radial-gradient(#5447d4, #312497);	background: radial-gradient(#5447d4, #312497);	border: 3px solid #8078ff;	overflow: hidden"};
-        
+
                 SwapsFromSkin = SwapsToSkin = placeHolderskin;
-        
+
                 StateHasChanged();
             }
         }
@@ -469,9 +470,10 @@ button.refresh:hover span:after {
         placeHolderskin.id = "ITEM_ID                                                                                                                                                    ";
         placeHolderskin.images = new Data.SkinObj.Images() { icon = "empty-icon.png", smallIcon = "empty-icon.png" };
         placeHolderskin.rarity = new Data.SkinObj.Rarity() { value = "none", bgcss = "background: -o-radial-gradient(#5447d4, #312497);	background: radial-gradient(#5447d4, #312497);	border: 3px solid #8078ff;	overflow: hidden"};
-        
+
         SwapsFromSkin = SwapsToSkin = placeHolderskin;
         StateHasChanged();
     }
-    
+
     }
+    RUN
